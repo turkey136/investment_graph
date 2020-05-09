@@ -1,0 +1,27 @@
+version: '3'
+services:
+  server:
+    container_name: 'server'
+    build: ./
+    tty: true
+    volumes:
+      - ../aws/credentials:/.aws/credentials
+      - ./:/app
+    env_file:
+      - ./env.example
+    networks:
+      - server
+  db:
+    image: mariadb
+    container_name: 'db'
+    restart: always
+    ports:
+      - 3306:3306
+    env_file:
+      - ./env.example
+    networks:
+      - server
+
+networks:
+  server:
+    driver: bridge
