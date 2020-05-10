@@ -2,7 +2,9 @@ version: '3'
 services:
   server:
     container_name: 'server'
-    build: ./
+    build:
+      context: .
+      dockerfile: Dockerfile_ec2
     tty: true
     volumes:
       - ../aws/credentials:/.aws/credentials
@@ -13,8 +15,10 @@ services:
     networks:
       - server
   db:
-    image: mariadb
     container_name: 'db'
+    build:
+      context: .
+      dockerfile: Dockerfile_mariadb
     restart: always
     ports:
       - 3306:3306
