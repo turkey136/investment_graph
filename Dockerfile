@@ -7,4 +7,4 @@ RUN ./aws/install
 
 RUN python -m ensurepip --default-pip
 RUN pip install --upgrade pip
-RUN pip install pandas-datareader PyMySQL Flask
+RUN pip install  wheel pandas pandas-datareader PyMySQL Flask
