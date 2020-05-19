@@ -1,7 +1,7 @@
 FROM amazonlinux:2
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN yum install unzip git -y
+RUN yum install unzip git mysql -y
 RUN unzip awscliv2.zip
 RUN ./aws/install
 
