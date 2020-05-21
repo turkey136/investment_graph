@@ -11,7 +11,8 @@ create_tables = [
             sql.create_stock_table,
             sql.create_stock_price,
             sql.create_stock_indexs,
-            sql.create_stock_price_indexs
+            sql.create_stock_price_indexs,
+            sql.create_view_sql
         ]
 
 try:

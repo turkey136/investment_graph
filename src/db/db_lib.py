@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import collections
 
-def check_vary_code(last_day_close_value, close_value):
+def convert_vary_code(last_day_close_value, close_value):
     if last_day_close_value != None:
         if close_value == last_day_close_value:
             return 0
