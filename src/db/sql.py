@@ -86,3 +86,4 @@ drop_tables = [
 ]
 
 # search same data
+stock_list_by_code = 'SELECT code, name FROM stack order by code'

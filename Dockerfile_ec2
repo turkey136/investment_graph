@@ -1,10 +1,10 @@
 FROM amazonlinux:2
 
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN yum install unzip git mysql -y
-RUN unzip awscliv2.zip
-RUN ./aws/install
+#RUN yum update
+#RUN yum install unzip git mysql hostname lsof -y
 
-RUN python -m ensurepip --default-pip
-RUN pip install --upgrade pip
-RUN pip install  wheel pandas pandas-datareader PyMySQL Flask
+#RUN python -m ensurepip --default-pip
+#RUN pip install --upgrade pip
+#RUN pip install  wheel pandas pandas-datareader PyMySQL Flask pathlib
+
+EXPOSE 5000

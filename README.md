@@ -14,8 +14,14 @@ docker-comporse exec server bash
 
 # table 作成
 cd src
-python migrate.py
+python db/migrate.py
 
 # 既存データ作成
-python seed.py
+python db/seed_master.py
+python db/insert_stock_price.py
+```
+
+### DB Dump(stock_price)
+```
+ mysqldump -u root -h db -p -t investment stock_price > ../radata/dump.sql
 ```

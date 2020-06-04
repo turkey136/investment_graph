@@ -14,6 +14,8 @@ services:
       - ./env.example
     networks:
       - server
+    ports:
+      - 5000:5000
   db:
     container_name: 'db'
     build:
